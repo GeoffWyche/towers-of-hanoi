@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+  <!-- Code Copyleft. Feel free to use and adapt.
+       Give credit to the author (Geoff Wyche, 2014)
+    -->
+  <head>
+    <link rel="icon" type="image/png" href="favicon.png" />
+    <style>
+      @font-face {
+      font-family:font1;
+      src:url(Hobby-of-night.ttf);
+      }
+
+      h1 {
+      font-family:font1;
+      font-size:300%;
+      }
+
+      table, tr, td {
+      font-family:font1;
+      }
+
+      td {
+      font-size:200%;
+      }
+
+      div.tower {
+      position:absolute;
+      background-color:lightblue;
+      }
+
+      div#tower1.tower {
+      margin-left:0px;
+      float:left;
+      }
+      
+      div#tower2.tower {
+      margin-left:220px;
+      float:left;
+      }
+      
+      div#tower3.tower {
+      margin-left:440px;
+      float:left;
+      }
+      
+    </style>
+    <title>Towers of Hanoi</title>
+    <script src="towers.js"></script>
+  </head>
+  <body onload='app()' style="background-color:lightblue">
+    <!--
+	<button id="debugButton" onclick='towerdebug()'>TowerDebug</button>
+	-->
+    <h1 style="width:640px;text-align:center">Towers of Hanoi</h1>
+    <div id="gameholder" style="width:640px;height:360px;padding:0px;border:2px solid #000000;margin:0px;border-radius:20px;position:relative">
+    <table style="width:630px;">
+      <tr>
+	<td><button id="aboutButton" style="font-family:font1;font-size:70%">About</button></td>
+	<td style="text-align:right"><button id="resetButton" style="font-family:font1;font-size:70%">Reset</button></td>
+      </tr>
+    </table>
+      <div id="pieceholder" style="width:100%;height:45px;padding:0px;border:0px solid black;position:relative;">
+      </div>
+      <div id="towercontainer" style="width:100%;background-color:lightblue;position:relative">
+	<div class="tower" id="tower1" style="width:200px;height:245px;position:absolute;">
+	  <p style="font-family:font1;text-align:center;">Tower 1</p>
+	  <button class="towerbutton" style="width:200px;height:245px;left:0px;top:0px;background-color:lightgreen;position:absolute;opacity:0.0;z-index:100;"></button>
+	</div>
+	<div class="tower" id="tower2" style="width:200px;height:245px;position:absolute;">
+	  <p style="font-family:font1;text-align:center;">Tower 2</p>
+	  <button class="towerbutton" style="width:200px;height:245px;left:0px;top:0px;background-color:lightgreen;position:absolute;opacity:0.0;z-index:100;"></button>
+	</div>
+	<div class="tower" id="tower3" style="width:200px;height:245px;position:absolute;">
+	  <p style="font-family:font1;text-align:center">Tower 3</p>
+	  <button class="towerbutton" style="width:200px;height:245px;left:0px;top:0px;background-color:lightgreen;position:absolute;opacity:0.0;z-index:100;"></button>
+	</div>
+      </div>
+    </div>
+  </body>
+</html>
